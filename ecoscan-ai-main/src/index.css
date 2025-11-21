@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Eco-friendly green palette */
+    --background: 140 30% 98%;
+    --foreground: 160 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 15%;
+
+    /* Fresh green primary */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 70% 50%;
+
+    /* Soft earth secondary */
+    --secondary: 30 40% 94%;
+    --secondary-foreground: 160 30% 15%;
+
+    --muted: 140 20% 95%;
+    --muted-foreground: 160 15% 45%;
+
+    /* Sky blue accent */
+    --accent: 200 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 20% 88%;
+    --input: 140 20% 88%;
+    --ring: 142 76% 36%;
+
+    --radius: 1rem;
+
+    /* Category colors */
+    --plastic: 45 93% 58%;
+    --paper: 24 80% 62%;
+    --organic: 84 65% 49%;
+    --metal: 210 50% 55%;
+    --glass: 180 60% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 70% 50%));
+    --gradient-hero: linear-gradient(180deg, hsl(140 30% 98%), hsl(140 40% 95%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(142 76% 36% / 0.15);
+    --shadow-card: 0 8px 30px -6px hsl(142 40% 30% / 0.12);
+    --shadow-glow: 0 0 30px hsl(142 70% 50% / 0.3);
+  }
+
+  .dark {
+    --background: 160 30% 10%;
+    --foreground: 140 20% 90%;
+
+    --card: 160 25% 15%;
+    --card-foreground: 140 20% 90%;
+
+    --popover: 160 25% 15%;
+    --popover-foreground: 140 20% 90%;
+
+    --primary: 142 70% 50%;
+    --primary-foreground: 160 30% 10%;
+    --primary-glow: 142 70% 60%;
+
+    --secondary: 160 20% 20%;
+    --secondary-foreground: 140 20% 90%;
+
+    --muted: 160 20% 20%;
+    --muted-foreground: 140 15% 60%;
+
+    --accent: 200 60% 50%;
+    --accent-foreground: 160 30% 10%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 140 20% 90%;
+
+    --border: 160 20% 25%;
+    --input: 160 20% 25%;
+    --ring: 142 70% 50%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(160 30% 10%), hsl(160 25% 15%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
